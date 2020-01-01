@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  ffmpeg:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./var:/app/var
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+
+volumes:
+  var:
